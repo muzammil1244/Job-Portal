@@ -19,7 +19,7 @@ const app = express()
 dotenv.config()
 
 const PORT = process.env.PORT || 8001
-handleconnection()
+handleconnection(process.env.MONGO_URL)
 
 
 //middle layer

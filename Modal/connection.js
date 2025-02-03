@@ -1,8 +1,8 @@
 import mongoose from "mongoose"
 
-const handleconnection = async () => {
+const handleconnection = async (url) => {
   try {
-    await mongoose.connect("mongodb+srv://muzammil1244:8446411038@jobcluster.04e2m.mongodb.net/muzammil1244", { useNewUrlParser: true, useUnifiedTopology: true })
+    await mongoose.connect(url)
     console.log("Connected to MongoDB successfully")
   } catch (error) {
     console.error("Error connecting to MongoDB:", error)
