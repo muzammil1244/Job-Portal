@@ -40,7 +40,6 @@ const options ={
         servers:[
             {
                 url:"http://localhost:8001"
-                 url:"https://job-portal-vsl5.onrender.com
             }
         ]
     },
