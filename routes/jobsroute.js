@@ -7,6 +7,56 @@ import { updatjobs } from "../Controler/jobpost.js";
 export const jobrouter = express.Router();
 
 /**
+  * @swagger
+  * components:
+  *   schemas:
+  *     Job:
+  *       type: object
+  *       required:
+  *         - company
+  *         - position
+  *         - workLocation
+  *         - createBy
+  *       properties:
+  *         id:
+  *           type: string
+  *           description: The auto-generated id of the job
+  *         company:
+  *           type: string
+  *           description: Name of the company
+  *         position:
+  *           type: string
+  *           description: Job position
+  *           maxLength: 100
+  *         status:
+  *           type: string
+  *           enum: [pending, reject, interview]
+  *           default: pending
+  *           description: Status of the job application
+  *         worktype:
+  *           type: string
+  *           enum: [part-time, full-time, internship, contract]
+  *           default: full-time
+  *           description: Type of job
+  *         workLocation:
+  *           type: string
+  *           description: Job location
+  *           default: Mumbai
+  *         createBy:
+  *           type: string
+  *           description: User ID who created the job post
+  *       example:
+  *         company: "TechCorp"
+  *         position: "Software Engineer"
+  *         status: "pending"
+  *         worktype: "full-time"
+  *         workLocation: "Mumbai"
+  *         createBy: "60d0fe4f5311236168a109ca"
+  */
+
+
+
+/**
  * @swagger
  * tags:
  *   - name: Jobs
